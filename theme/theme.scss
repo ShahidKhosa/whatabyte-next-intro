@@ -1,0 +1,159 @@
+@import "scss/bootstrap";
+@import "modules/fonts";
+@import "modules/base";
+/*---------------------------
+	Header Styling
+----------------------------*/
+@import "modules/header";
+
+/*---------------------------
+	Page Styling
+----------------------------*/
+
+.page__wrap {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem 7.5rem;
+  position: relative;
+  font-family: 'Lato';
+}
+
+.welcome__screen--inner {
+  text-align: center;
+
+  .welcome__brand {
+    display: inline-block;
+    margin-bottom: 2rem;
+    max-width: 600px;
+
+    img {
+      display: inline-block;
+      max-width: 100%;
+      width: 25rem;
+      max-height: 300px;
+
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 2.5rem;
+    line-height: 2.5rem;
+
+    small {
+      display: block;
+      font-size: 60%;
+    }
+  }
+
+  .btn-wrapper {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  
+    li {
+      list-style: none;
+      max-width: 25%;
+      flex: 25%;
+      padding: 0.5rem;
+  
+      a {
+        text-transform: uppercase;
+        display: block;
+        text-decoration: none;
+        padding: 1.5rem 2rem;
+        color: $white;
+        line-height: 1;
+        font-weight: 600;
+        font-size: 1.5rem;
+        letter-spacing: 0.04rem;
+        @include border-radius(0.25rem);
+        width: 300px;
+  
+        small {
+          font-size: 60%;
+          display: block;
+          margin-top: 0.3rem;
+          font-weight: normal;
+        }
+  
+        &:hover {
+          @include transform(translateY(-0.25rem));
+        }
+      }
+  
+      &.green {
+        a {
+          background: $color__green;
+        }
+      }
+  
+      &.red {
+        a {
+          background: $color__red;
+        }
+      }
+  
+      &.yellow {
+        a {
+          background: $color__yellow;
+          color: $color__black;
+        }
+      }
+  
+      &.blue {
+        a {
+          background: $color__blue;
+        }
+      }
+  
+      &.gray {
+        a {
+          background: $color__gray;
+        }
+      }
+    }
+  }
+}
+
+/*---------------------------
+	Visitor Sign-in Page Styling
+----------------------------*/
+h1.page-heading {  
+  text-transform: uppercase;
+  font-size: 1.60rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.5rem;
+}
+.page-content{
+  font-size: 1.3rem;
+}
+
+.error-message {
+  display: block;
+  margin-top: 0rem;
+  height: 10px;
+  color: red;
+  margin-left: 1rem;
+}
+
+/*---------------------------
+	Footer Styling
+----------------------------*/
+@import "modules/footer";
+
+/*---------------------------
+	Plugins Styling
+----------------------------*/
+@import "modules/plugins";
+
+/*---------------------------
+	Media Queries
+----------------------------*/
+@import "modules/media";

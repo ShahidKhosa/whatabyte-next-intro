@@ -1,0 +1,76 @@
+@include media-breakpoint-up(xs) {
+
+}
+
+@include media-breakpoint-up(sm) {
+
+}
+
+@include media-breakpoint-up(md) {
+
+}
+
+@include media-breakpoint-up(lg) {
+
+}
+
+@include media-breakpoint-up(xl) {
+
+}
+
+/* NON Mobile ----------------- */
+
+
+@include media-breakpoint-down(lg) {
+
+}
+
+@include media-breakpoint-down(md) {
+  .welcome__cta--list {
+    li {
+      max-width: 50%;
+      flex: 50%;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .welcome__screen--inner {
+    .welcome__brand {
+      img {
+        width: 20rem;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+
+  .welcome__screen--inner {
+    .welcome__brand {
+      img {
+        width: 15rem;
+      }
+    }
+
+    h1 {
+      font-size: 1.3rem;
+
+      small {
+        font-size: 70%;
+        margin-top: 0.3rem;
+      }
+    }
+  }
+
+  .welcome__cta--list {
+    li {
+      max-width: 100%;
+      flex: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-down(xxs) {
+
+}

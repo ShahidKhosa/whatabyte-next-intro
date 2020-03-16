@@ -1,19 +1,15 @@
 import Link from "next/link";
 import { withRouter } from "next/router";
 
-import "./NavButton.scss";
-
-const NavButton = props => (
-  <Link href={props.path}>
-    <div
-      className={`NavButton ${
-        props.router.pathname === props.path ? "active" : ""
-      }`}
-    >
-      <div className="Icon">{props.icon}</div>
-      <span className="Label">{props.label}</span>
-    </div>
-  </Link>
+const NavButton = props => (  
+  <li className={props.buttonClass}>
+    <Link href={props.path}>
+      <a onClick={props.onButtonClick} className={'ssid_btn btn_' + props.buttonClass} title={props.text}>
+        {props.text}
+        {props.subText && <small>{props.subText}</small>}
+      </a>
+    </Link>
+  </li>
 );
 
 export default withRouter(NavButton);
